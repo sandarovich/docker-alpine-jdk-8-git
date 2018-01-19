@@ -46,7 +46,7 @@ RUN set -o errexit -o nounset \
 	&& echo "Testing Gradle installation" \
 && gradle --version
 
-# Install and add git volume
+# Install git
 RUN apk --update add git openssh && \
     rm -rf /var/lib/apt/lists/* && \
     rm /var/cache/apk/*
