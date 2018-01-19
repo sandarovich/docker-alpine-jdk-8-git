@@ -47,6 +47,5 @@ RUN set -o errexit -o nounset \
 && gradle --version
 
 # Install git
-RUN apk --update add git openssh && \
-    rm -rf /var/lib/apt/lists/* && \
-    rm /var/cache/apk/*
+RUN apk update && apk upgrade && \
+apk add --no-cache bash git openssh
