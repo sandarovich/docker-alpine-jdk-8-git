@@ -3,3 +3,4 @@
 JDK 8
 Gradle 4.1
 Git
+Openssl
