@@ -7,9 +7,10 @@ apk add --update openssl && \
 apk --no-cache add curl && \
 apk add docker && \
 apk add openrc && \
-rc-update add docker boot
+rc-update add docker boot &&\
+apk add sudo
 
-RUN adduser -D docker_runner
-RUN adduser -s /bin/ash -G docker docker_runner
-USER docker_runner
-ENTRYPOINT ["sh"]
+#RUN adduser -D docker_runner
+#RUN adduser -s /bin/ash -G docker docker_runner
+#USER docker_runner
+#ENTRYPOINT ["sh"]
