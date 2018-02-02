@@ -5,3 +5,4 @@
 - Git
 - Openssl
 - Curl
+- Docker daemon
