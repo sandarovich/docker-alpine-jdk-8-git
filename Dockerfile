@@ -5,7 +5,7 @@ RUN apk update && apk upgrade && \
 apk add --no-cache bash git openssh && \
 apk add --update openssl && \
 apk --no-cache add curl && \
-apk add docker 
+apk --update --no-cache add docker
 # rc-update add docker boot &&\
 # service docker start
 COPY dockerd-entrypoint.sh /usr/local/bin/
