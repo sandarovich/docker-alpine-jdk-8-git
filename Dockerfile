@@ -8,8 +8,8 @@ apk --no-cache add curl && \
 apk --update --no-cache add docker
 # rc-update add docker boot &&\
 # service docker start
-COPY dockerd-entrypoint.sh /usr/local/bin/
-COPY dockerd-cmd.sh /usr/local/bin/
-COPY setup-compose /usr/local/bin/
-EXPOSE 2375 ENTRYPOINT ["dockerd-entrypoint.sh"]
-CMD ["dockerd-cmd.sh"]
+# COPY dockerd-entrypoint.sh /usr/local/bin/
+# COPY dockerd-cmd.sh /usr/local/bin/
+# COPY setup-compose /usr/local/bin/
+EXPOSE 2375 ENTRYPOINT ["service docker start"]
+# CMD ["dockerd-cmd.sh"]
