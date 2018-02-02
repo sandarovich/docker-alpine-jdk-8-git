@@ -8,3 +8,8 @@ apk --no-cache add curl && \
 apk add docker && \
 apk add openrc && \
 rc-update add docker boot
+
+RUN adduser -D docker_runner
+RUN adduser -s /bin/ash -G docker docker_runner
+USER docker_runner
+ENTRYPOINT ["sh"]
