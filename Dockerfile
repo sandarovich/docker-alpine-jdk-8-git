@@ -8,4 +8,4 @@ apk --no-cache add curl && \
 apk add docker &&\
 apk --no-cache add openrc &&\
 # rc-update add docker boot &&\
-service docker start
+# service docker start
