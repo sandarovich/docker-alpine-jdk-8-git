@@ -6,4 +6,5 @@ apk add --no-cache bash git openssh && \
 apk add --update openssl && \
 apk --no-cache add curl && \
 apk add docker &&\
+apk --no-cache add openrc &&\
 rc-update add docker boot
