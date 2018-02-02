@@ -3,4 +3,5 @@ USER root
 # Install git and openssl
 RUN apk update && apk upgrade && \
 apk add --no-cache bash git openssh && \
-apk add --update openssl
+apk add --update openssl && \
+apk --no-cache add curl
