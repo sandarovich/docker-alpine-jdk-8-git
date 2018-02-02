@@ -9,3 +9,8 @@ apk add docker &&\
 apk --no-cache add openrc
 # rc-update add docker boot &&\
 # service docker start
+COPY dockerd-entrypoint.sh /usr/local/bin/
+COPY dockerd-cmd.sh /usr/local/bin/
+COPY setup-compose /usr/local/bin/
+EXPOSE 2375 ENTRYPOINT ["dockerd-entrypoint.sh"]
+CMD ["dockerd-cmd.sh"]
